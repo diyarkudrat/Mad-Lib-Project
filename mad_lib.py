@@ -1,14 +1,4 @@
 
-
-# def enter_words(function_code):
-#     noun = input("Enter noun: ")
-#     adj = input("Enter adjective: ")
-#     verb = input("Enter verb: ")
-#     ing_verb = input("Enter verb ending in -ing: ")
-
-# print("It's been a " + adj + " summer here in " + noun + " City. The " + adj
-#     + " car has been " + ing_verb + " the whole season. I think it's time to " + verb + " the car.")
-
 words = ['adjective','noun','adj','verb ending in -ing','verb','adjective','adjective','number','name']
 
 def is_input_valid(input_of_list):
@@ -57,11 +47,3 @@ def mad_lib_game():
             print("not an option")
 
 mad_lib_game()
-
-
-
-
-    # def select(function_code):
-    #     if function_code == 'S':
-    #         start_game = input("Press S to start game!")
-    #         fun_game()
