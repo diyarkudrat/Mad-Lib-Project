@@ -9,7 +9,7 @@
 # print("It's been a " + adj + " summer here in " + noun + " City. The " + adj
 #     + " car has been " + ing_verb + " the whole season. I think it's time to " + verb + " the car.")
 
-words = ('adjective','noun','adj','verb ending in -ing','verb','adjective','adjective','number','name')
+words = ['adjective','noun','adj','verb ending in -ing','verb','adjective','adjective','number','name']
 
 def is_input_valid(input_of_list):
     if input_of_list == "":
@@ -17,13 +17,13 @@ def is_input_valid(input_of_list):
     else:
         return True
 
-def create_story(input):
-    stored_list = list(input)
-    for i in range(0, len(input)):
+def create_story(val):
+    stored_list = val
+    for i in range(0, len(val)):
         invalid_input = True
         check = True
         while invalid_input:
-            recieved_input = input("Enter " + input[i] + ": ")
+            recieved_input = input("Enter " + val[i] + ": ")
             check = is_input_valid(recieved_input)
             if check == False:
                 print("Invalid input. Try again")
@@ -34,26 +34,29 @@ def create_story(input):
 
 def print_story_out(function_code, given_word):
     if function_code == 'S':
-        print("It's been a " + given_word[1] + " summer here in " + given_word[2] + " City. The " +
-        given_word[3] + " car has been " + given_word[4] + " the whole season. I think it's time to " +
-        given_word[5] + " the car and buy a new one. The new car should be " + given_word[6] + " and " +
-        given_word[7] + " and worth " + given_word[8] + ". The new car's name will be " + given_word[9] + ".")
+        print("It's been a " + given_word[0] + " summer here in " + given_word[1] + " City. The " +
+        given_word[2] + " car has been " + given_word[3] + " the whole season. I think it's time to " +
+        given_word[4] + " the car and buy a new one. The new car should be " + given_word[5] + " and " +
+        given_word[6] + " and worth " + given_word[7] + ". The new car's name will be " + given_word[8] + ".")
     else:
         print("Nothing selected")
 
 def mad_lib_game():
-    running = True
+    # running = True
+    #
+    # while running:
+    print("Welcome to the Mad Lib Game!")
+    print('Press Q to quit')
 
-    while running:
-        print("Welcome to the Mad Lib Game!")
-        function_code = input('Press S to continue!')
-        if function_code == 'S':
-            print_story_out(function_code, create_story(words))
-        elif:
-            print('Press Q to quit')
+    function_code = input('Press S to continue!')
+    if function_code == 'S':
+        print_story_out(function_code, create_story(words))
+    elif function_code == 'Q':
             running = False
-        else:
+    else:
             print("not an option")
+
+mad_lib_game()
 
 
 
