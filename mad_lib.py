@@ -41,6 +41,20 @@ def print_story_out(function_code, given_word):
     else:
         print("Nothing selected")
 
+def mad_lib_game():
+    running = True
+
+    while running:
+        print("Welcome to the Mad Lib Game!")
+        function_code = input('Press S to continue!')
+        if function_code == 'S':
+            print_story_out(function_code, create_story(words))
+        elif:
+            print('Press Q to quit')
+            running = False
+        else:
+            print("not an option")
+
 
 
 
@@ -48,11 +62,3 @@ def print_story_out(function_code, given_word):
     #     if function_code == 'S':
     #         start_game = input("Press S to start game!")
     #         fun_game()
-
-# def mad_lib_game():
-#     running = True
-#
-#     while running:
-#         selection = input("Press S to start the game!")
-#         running = enter_words(selection)
-# mad_lib_game()
