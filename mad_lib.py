@@ -1,14 +1,18 @@
 
 words = ['adjective','noun','adj','verb ending in -ing','verb','adjective','adjective','number','name']
 
+
 def is_input_valid(input_of_list):
     if input_of_list == "":
-        return false
+        return False
+    elif input_of_list == " ":
+        return False
     else:
         return True
 
 def create_story(val):
-    stored_list = val
+    stored_list = val[0:9]
+    print(stored_list)
     for i in range(0, len(val)):
         invalid_input = True
         check = True
@@ -32,18 +36,18 @@ def print_story_out(function_code, given_word):
         print("Nothing selected")
 
 def mad_lib_game():
-    # running = True
-    #
-    # while running:
-    print("Welcome to the Mad Lib Game!")
-    print('Press Q to quit')
+    running = True
 
-    function_code = input('Press S to continue!')
-    if function_code == 'S':
-        print_story_out(function_code, create_story(words))
-    elif function_code == 'Q':
+    while running:
+        print("Welcome to the Mad Lib Game!")
+        print('Press Q to quit')
+
+        function_code = input('Press S to continue!')
+        if function_code == 'S':
+            print_story_out(function_code, create_story(words))
+        elif function_code == 'Q':
             running = False
-    else:
+        else:
             print("not an option")
 
 mad_lib_game()
